@@ -1,0 +1,293 @@
+to<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WEBUILD - Construction Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#040F28">
+    <meta name="description" content="Explore and manage construction project photos and videos.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="../webuild-1/webuild-1.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../webuild-1/webuild-1.0.0/css/style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="construction-project-page">
+    <div class="container-fluid px-5 d-none d-lg-block">
+        <div class="row gx-5">
+            <div class="col-lg-4 text-center py-3"><div class="d-inline-flex align-items-center"><i class="bi bi-geo-alt fs-1 text-primary me-3"></i><div class="text-start"><h6 class="text-uppercase fw-bold">Our Office</h6><span>123 Street, New York, USA</span></div></div></div>
+            <div class="col-lg-4 text-center border-start border-end py-3"><div class="d-inline-flex align-items-center"><i class="bi bi-envelope-open fs-1 text-primary me-3"></i><div class="text-start"><h6 class="text-uppercase fw-bold">Email Us</h6><span>info@example.com</span></div></div></div>
+            <div class="col-lg-4 text-center py-3"><div class="d-inline-flex align-items-center"><i class="bi bi-phone-vibrate fs-1 text-primary me-3"></i><div class="text-start"><h6 class="text-uppercase fw-bold">Call Us</h6><span>+012 345 6789</span></div></div></div>
+        </div>
+    </div>
+
+    <div class="container-fluid sticky-top bg-dark bg-light-radial shadow-sm px-5 pe-lg-0">
+        <nav class="navbar navbar-expand-lg bg-dark bg-light-radial navbar-dark py-3 py-lg-0" aria-label="Main navigation">
+            <a href="../webuild-1/webuild-1.0.0/index.html" class="navbar-brand"><h1 class="m-0 display-4 text-uppercase text-white"><i class="bi bi-building text-primary me-2"></i>WEBUILD</h1></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="../webuild-1/webuild-1.0.0/index.html" class="nav-item nav-link">Home</a>
+                    <a href="../webuild-1/webuild-1.0.0/about.html" class="nav-item nav-link">About</a>
+                    <a href="../webuild-1/webuild-1.0.0/service.html" class="nav-item nav-link">Service</a>
+                    <a href="#projects" class="nav-item nav-link active" aria-current="page">Our Project</a>
+                    <a href="../webuild-1/webuild-1.0.0/contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="../webuild-1/webuild-1.0.0/contact.html" class="nav-item nav-link bg-primary text-white px-5 ms-3 d-none d-lg-block">Get A Quote <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <header class="container-fluid page-header">
+        <h1 class="display-3 text-uppercase text-white mb-3">Project</h1>
+        <div class="d-inline-flex text-white"><h6 class="text-uppercase m-0"><a href="../webuild-1/webuild-1.0.0/index.html">Home</a></h6><h6 class="text-white m-0 px-3">/</h6><h6 class="text-uppercase text-white m-0">Project</h6></div>
+    </header>
+
+    <main id="projects" class="container-fluid bg-light py-6 px-5">
+        <div class="text-center mx-auto mb-4 project-intro">
+            <h2 class="display-5 text-uppercase mb-3">Some Of Our <span class="text-primary">Popular</span> Dream Projects</h2>
+            <p class="text-body-secondary mb-0">Construction in progress and completed work, all in one place.</p>
+        </div>
+
+        <div class="media-upload-bar">
+            <div><strong>Project gallery</strong><span id="mediaCount">9 media items</span></div>
+            <div class="media-upload-actions"><span>Images and videos</span><a href="upload.html" class="btn btn-primary media-add-button" aria-label="Sign in to add project media"><i class="bi bi-plus-lg me-2" aria-hidden="true"></i>Add media</a></div>
+        </div>
+        <p class="media-feedback" id="mediaFeedback" role="status" aria-live="polite">Choose images or videos to preview them in this gallery.</p>
+
+        <div class="row gx-5">
+            <div class="col-12 text-center">
+                <div class="d-inline-block bg-dark-radial text-center pt-4 px-4 px-sm-5 mb-5">
+                    <div class="media-filter-list" id="mediaFilters" role="group" aria-label="Filter project media">
+                        <button class="media-filter btn btn-outline-primary bg-white p-2 active mx-2 mb-4" type="button" data-filter="all" aria-pressed="true"><img src="img/portfolio-1.jpg" alt="" width="150" height="100"><span class="media-filter-label">All</span></button>
+                        <button class="media-filter btn btn-outline-primary bg-white p-2 mx-2 mb-4" type="button" data-filter="images" aria-pressed="false"><img src="img/portfolio-2.jpg" alt="" width="150" height="100"><span class="media-filter-label">Photos</span></button>
+                        <button class="media-filter btn btn-outline-primary bg-white p-2 mx-2 mb-4" type="button" data-filter="video" aria-pressed="false"><img src="img/portfolio-3.jpg" alt="" width="150" height="100"><span class="media-filter-label">Videos</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-5 portfolio-container" id="portfolioContainer" aria-live="polite">
+            <article class="col-xl-4 col-lg-6 col-md-6 portfolio-item" data-category="construction" data-media-type="image">
+                <div class="position-relative portfolio-box project-media-card"><img class="img-fluid w-100 project-media-image" src="img/portfolio-1.jpg" alt="Modern residential construction project"><div class="portfolio-title shadow-sm"><p class="h4 text-uppercase">Riverside Residence</p><span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>New York, USA</span></div><button class="portfolio-btn" type="button" data-action="preview" aria-label="Preview Riverside Residence"><i class="bi bi-plus text-white"></i></button><button class="media-remove" type="button" data-action="remove" aria-label="Remove Riverside Residence">×</button></div>
+            </article>
+            <article class="col-xl-4 col-lg-6 col-md-6 portfolio-item" data-category="renovation" data-media-type="image">
+                <div class="position-relative portfolio-box project-media-card"><img class="img-fluid w-100 project-media-image" src="img/portfolio-2.jpg" alt="Renovated commercial building"><div class="portfolio-title shadow-sm"><p class="h4 text-uppercase">Market Street Renovation</p><span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>Brooklyn, USA</span></div><button class="portfolio-btn" type="button" data-action="preview" aria-label="Preview Market Street Renovation"><i class="bi bi-plus text-white"></i></button><button class="media-remove" type="button" data-action="remove" aria-label="Remove Market Street Renovation">×</button></div>
+            </article>
+            <article class="col-xl-4 col-lg-6 col-md-6 portfolio-item" data-category="construction" data-media-type="image">
+                <div class="position-relative portfolio-box project-media-card"><img class="img-fluid w-100 project-media-image" src="img/portfolio-3.jpg" alt="Construction site and new building"><div class="portfolio-title shadow-sm"><p class="h4 text-uppercase">Harbor View Apartments</p><span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>Queens, USA</span></div><button class="portfolio-btn" type="button" data-action="preview" aria-label="Preview Harbor View Apartments"><i class="bi bi-plus text-white"></i></button><button class="media-remove" type="button" data-action="remove" aria-label="Remove Harbor View Apartments">×</button></div>
+            </article>
+            <article class="col-xl-4 col-lg-6 col-md-6 portfolio-item" data-category="renovation" data-media-type="image">
+                <div class="position-relative portfolio-box project-media-card"><img class="img-fluid w-100 project-media-image" src="img/portfolio-4.jpg" alt="Renovation work on a residential property"><div class="portfolio-title shadow-sm"><p class="h4 text-uppercase">Cedar Lane Restoration</p><span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>Jersey City, USA</span></div><button class="portfolio-btn" type="button" data-action="preview" aria-label="Preview Cedar Lane Restoration"><i class="bi bi-plus text-white"></i></button><button class="media-remove" type="button" data-action="remove" aria-label="Remove Cedar Lane Restoration">×</button></div>
+            </article>
+            <article class="col-xl-4 col-lg-6 col-md-6 portfolio-item" data-category="construction" data-media-type="image">
+                <div class="position-relative portfolio-box project-media-card"><img class="img-fluid w-100 project-media-image" src="img/portfolio-5.jpg" alt="New construction project"><div class="portfolio-title shadow-sm"><p class="h4 text-uppercase">Foundry Workspaces</p><span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>Newark, USA</span></div><button class="portfolio-btn" type="button" data-action="preview" aria-label="Preview Foundry Workspaces"><i class="bi bi-plus text-white"></i></button><button class="media-remove" type="button" data-action="remove" aria-label="Remove Foundry Workspaces">×</button></div>
+            </article>
+            <article class="col-xl-4 col-lg-6 col-md-6 portfolio-item" data-category="renovation" data-media-type="image">
+                <div class="position-relative portfolio-box project-media-card"><img class="img-fluid w-100 project-media-image" src="img/portfolio-6.jpg" alt="Completed renovation project"><div class="portfolio-title shadow-sm"><p class="h4 text-uppercase">Willow Park Homes</p><span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>Long Island, USA</span></div><button class="portfolio-btn" type="button" data-action="preview" aria-label="Preview Willow Park Homes"><i class="bi bi-plus text-white"></i></button><button class="media-remove" type="button" data-action="remove" aria-label="Remove Willow Park Homes">×</button></div>
+            </article>
+            <article class="col-xl-4 col-lg-6 col-md-6 portfolio-item" data-category="video" data-media-type="video">
+                <div class="position-relative portfolio-box project-media-card"><video class="img-fluid w-100 project-media-image" src="Video/WhatsApp%20Video%202026-10-05%20at%2011.52.48%20PM.mp4" poster="img/carousel-1.jpg" muted playsinline preload="metadata" aria-label="Construction progress video"></video><span class="video-badge">VIDEO</span><div class="portfolio-title shadow-sm"><p class="h4 text-uppercase">Construction Progress</p><span class="text-body"><i class="fa fa-video text-primary me-2"></i>Project video</span></div><button class="portfolio-btn" type="button" data-action="preview" aria-label="Preview construction progress video"><i class="bi bi-plus text-white"></i></button><button class="media-remove" type="button" data-action="remove" aria-label="Remove construction progress video">×</button></div>
+            </article>
+            <article class="col-xl-4 col-lg-6 col-md-6 portfolio-item" data-category="video" data-media-type="video">
+                <div class="position-relative portfolio-box project-media-card"><video class="img-fluid w-100 project-media-image" src="Video/WhatsApp%20Video%202026-10-07%20at%203.07.40%20PM.mp4" poster="img/carousel-2.jpg" muted playsinline preload="metadata" aria-label="Building project site video"></video><span class="video-badge">VIDEO</span><div class="portfolio-title shadow-sm"><p class="h4 text-uppercase">Building Site Update</p><span class="text-body"><i class="fa fa-video text-primary me-2"></i>Project video</span></div><button class="portfolio-btn" type="button" data-action="preview" aria-label="Preview building site update"><i class="bi bi-plus text-white"></i></button><button class="media-remove" type="button" data-action="remove" aria-label="Remove building site update">×</button></div>
+            </article>
+            <article class="col-xl-4 col-lg-6 col-md-6 portfolio-item" data-category="video" data-media-type="video">
+                <div class="position-relative portfolio-box project-media-card"><video class="img-fluid w-100 project-media-image" src="Video/WhatsApp%20Video%202026-10-07%20at%203.08.06%20PM.mp4" poster="img/portfolio-6.jpg" muted playsinline preload="metadata" aria-label="Construction work video"></video><span class="video-badge">VIDEO</span><div class="portfolio-title shadow-sm"><p class="h4 text-uppercase">On-Site Construction</p><span class="text-body"><i class="fa fa-video text-primary me-2"></i>Project video</span></div><button class="portfolio-btn" type="button" data-action="preview" aria-label="Preview on-site construction video"><i class="bi bi-plus text-white"></i></button><button class="media-remove" type="button" data-action="remove" aria-label="Remove on-site construction video">×</button></div>
+            </article>
+        </div>
+        <p class="gallery-empty" id="galleryEmpty" hidden>No projects match this filter yet.</p>
+    </main>
+
+    <footer class="footer container-fluid position-relative bg-dark bg-light-radial text-white-50 py-6 px-5">
+        <div class="row g-5">
+            <div class="col-lg-6 pe-lg-5"><a href="../webuild-1/webuild-1.0.0/index.html" class="navbar-brand"><h2 class="m-0 display-4 text-uppercase text-white"><i class="bi bi-building text-primary me-2"></i>WEBUILD</h2></a><p class="mt-3">Building spaces for the way people live and work.</p><p><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</p><p><i class="fa fa-phone-alt me-2"></i>+012 345 67890</p><p><i class="fa fa-envelope me-2"></i>info@example.com</p></div>
+            <div class="col-lg-6 ps-lg-5"><div class="row g-5"><div class="col-sm-6"><h4 class="text-white text-uppercase mb-4">Quick Links</h4><div class="d-flex flex-column justify-content-start"><a class="text-white-50 mb-2" href="../webuild-1/webuild-1.0.0/index.html"><i class="fa fa-angle-right me-2"></i>Home</a><a class="text-white-50 mb-2" href="../webuild-1/webuild-1.0.0/about.html"><i class="fa fa-angle-right me-2"></i>About Us</a><a class="text-white-50 mb-2" href="../webuild-1/webuild-1.0.0/service.html"><i class="fa fa-angle-right me-2"></i>Our Services</a><a class="text-white-50" href="../webuild-1/webuild-1.0.0/contact.html"><i class="fa fa-angle-right me-2"></i>Contact Us</a></div></div><div class="col-sm-6"><h4 class="text-white text-uppercase mb-4">Project Gallery</h4><p>Browse construction and renovation work.</p><a class="text-white-50" href="#projects"><i class="fa fa-angle-right me-2"></i>Our Projects</a></div></div></div>
+        </div>
+    </footer>
+
+    <dialog class="media-dialog" id="mediaDialog" aria-label="Project media preview"><form method="dialog"><button class="dialog-close" aria-label="Close preview">×</button></form><div id="dialogPreview"></div></dialog>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="media-store.js"></script>
+    <script>
+        const mediaInput = document.querySelector('#mediaInput');
+        const portfolioContainer = document.querySelector('#portfolioContainer');
+        const mediaFilters = [...document.querySelectorAll('.media-filter')];
+        const mediaCount = document.querySelector('#mediaCount');
+        const mediaFeedback = document.querySelector('#mediaFeedback');
+        const galleryEmpty = document.querySelector('#galleryEmpty');
+        const mediaDialog = document.querySelector('#mediaDialog');
+        const dialogPreview = document.querySelector('#dialogPreview');
+        let activeFilter = 'all';
+
+        function updateGallery() {
+            let visibleCount = 0;
+            const cards = [...portfolioContainer.querySelectorAll('.portfolio-item')];
+            cards.forEach((card) => {
+                const matches = activeFilter === 'all' || card.dataset.category === activeFilter || (activeFilter === 'images' && card.dataset.mediaType === 'image') || (activeFilter === 'video' && card.dataset.mediaType === 'video');
+                card.hidden = !matches;
+                if (matches) visibleCount += 1;
+            });
+            mediaCount.textContent = `${cards.length} media item${cards.length === 1 ? '' : 's'}`;
+            galleryEmpty.hidden = visibleCount !== 0;
+        }
+
+        function makeMediaCard(file) {
+            const type = file.mediaType || (file.type.startsWith('video/') ? 'video' : file.type.startsWith('image/') ? 'image' : null);
+            if (!type) return null;
+            const source = file.source || URL.createObjectURL(file.blob || file);
+            const title = file.projectTitle || file.name.replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' ');
+            const card = document.createElement('article');
+            card.className = 'col-xl-4 col-lg-6 col-md-6 portfolio-item';
+            card.dataset.category = 'uploads';
+            card.dataset.mediaType = type;
+            card.dataset.source = source;
+            card.dataset.mediaId = file.id || '';
+            const box = document.createElement('div');
+            box.className = 'position-relative portfolio-box project-media-card uploaded-media';
+            let media;
+            if (type === 'video') {
+                media = document.createElement('video');
+                media.preload = 'metadata';
+                media.muted = true;
+                media.playsInline = true;
+                media.src = source;
+                media.className = 'img-fluid w-100 project-media-image';
+                const badge = document.createElement('span');
+                badge.className = 'video-badge';
+                badge.textContent = 'VIDEO';
+                box.append(badge);
+            } else {
+                media = document.createElement('img');
+                media.src = source;
+                media.alt = title;
+                media.className = 'img-fluid w-100 project-media-image';
+            }
+            const caption = document.createElement('div');
+            caption.className = 'portfolio-title shadow-sm';
+            const heading = document.createElement('p');
+            heading.className = 'h4 text-uppercase';
+            heading.textContent = title;
+            const detail = document.createElement('span');
+            detail.className = 'text-body';
+            detail.innerHTML = '<i class="fa fa-map-marker-alt text-primary me-2" aria-hidden="true"></i>';
+            detail.append(document.createTextNode(file.caption || file.name));
+            caption.append(heading, detail);
+            const preview = document.createElement('button');
+            preview.className = 'portfolio-btn';
+            preview.type = 'button';
+            preview.dataset.action = 'preview';
+            preview.setAttribute('aria-label', `Preview ${title}`);
+            preview.innerHTML = '<i class="bi bi-plus text-white" aria-hidden="true"></i>';
+            const remove = document.createElement('button');
+            remove.className = 'media-remove';
+            remove.type = 'button';
+            remove.dataset.action = 'remove';
+            remove.setAttribute('aria-label', `Remove ${title}`);
+            remove.textContent = '×';
+            box.append(media, caption, preview, remove);
+            card.append(box);
+            return card;
+        }
+
+        async function loadSavedMedia() {
+            try {
+                const records = await ProjectMediaStore.getAll();
+                records.sort((left, right) => left.createdAt - right.createdAt);
+                records.forEach((record) => {
+                    const card = makeMediaCard(record);
+                    if (card) portfolioContainer.prepend(card);
+                });
+                updateGallery();
+                if (new URLSearchParams(window.location.search).has('uploaded')) {
+                    mediaFeedback.textContent = 'Your media and project title have been added to the gallery.';
+                }
+            } catch (error) {
+                mediaFeedback.textContent = 'Saved media could not be loaded from this browser.';
+            }
+        }
+
+        loadSavedMedia();
+
+        mediaFilters.forEach((button) => button.addEventListener('click', () => {
+            activeFilter = button.dataset.filter;
+            mediaFilters.forEach((filter) => {
+                const selected = filter === button;
+                filter.classList.toggle('active', selected);
+                filter.setAttribute('aria-pressed', String(selected));
+            });
+            updateGallery();
+        }));
+
+        mediaInput.addEventListener('change', async () => {
+            const files = [...mediaInput.files];
+            const supported = files.filter((file) => file.type.startsWith('image/') || file.type.startsWith('video/'));
+            try {
+                for (const file of supported) {
+                    const record = {
+                        id: `${Date.now()}-${Math.random().toString(36).slice(2)}`,
+                        name: file.name,
+                        mediaType: file.type.startsWith('video/') ? 'video' : 'image',
+                        projectTitle: file.name.replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' '),
+                        caption: '',
+                        blob: file,
+                        createdAt: Date.now()
+                    };
+                    await ProjectMediaStore.put(record);
+                    const card = makeMediaCard(record);
+                    if (card) portfolioContainer.prepend(card);
+                }
+                mediaFeedback.textContent = supported.length ? `${supported.length} ${supported.length === 1 ? 'file was' : 'files were'} added to the gallery.` : 'Choose image or video files to add them to the gallery.';
+            } catch (error) {
+                mediaFeedback.textContent = 'These files could not be saved in this browser.';
+            }
+            mediaInput.value = '';
+            updateGallery();
+        });
+
+        portfolioContainer.addEventListener('click', async (event) => {
+            const action = event.target.closest('[data-action]');
+            if (!action) return;
+            const card = action.closest('.portfolio-item');
+            if (action.dataset.action === 'remove') {
+                if (card.dataset.mediaId) {
+                    try {
+                        await ProjectMediaStore.remove(card.dataset.mediaId);
+                    } catch (error) {
+                        mediaFeedback.textContent = 'This media could not be removed from browser storage.';
+                        return;
+                    }
+                }
+                if (card.dataset.source) URL.revokeObjectURL(card.dataset.source);
+                card.remove();
+                updateGallery();
+                return;
+            }
+            dialogPreview.replaceChildren();
+            const source = card.dataset.source || card.querySelector('.project-media-image').src;
+            const preview = card.dataset.mediaType === 'video' ? document.createElement('video') : document.createElement('img');
+            preview.src = source;
+            preview.alt = card.querySelector('.portfolio-title p').textContent;
+            if (preview.tagName === 'VIDEO') {
+                preview.controls = true;
+                preview.autoplay = true;
+                preview.playsInline = true;
+            }
+            dialogPreview.append(preview);
+            mediaDialog.showModal();
+        });
+
+        mediaDialog.addEventListener('click', (event) => {
+            if (event.target === mediaDialog) mediaDialog.close();
+        });
+        mediaDialog.addEventListener('close', () => {
+            const video = dialogPreview.querySelector('video');
+            if (video) video.pause();
+            dialogPreview.replaceChildren();
+        });
+    </script>
+</body>
+</html>

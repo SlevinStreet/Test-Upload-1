@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#040F28">
+    <title>Upload Media | WEBUILD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="../webuild-1/webuild-1.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../webuild-1/webuild-1.0.0/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="construction-project-page construction-upload-page">
+    <div class="container-fluid px-5 d-none d-lg-block">
+        <div class="row gx-5">
+            <div class="col-lg-4 text-center py-3"><div class="d-inline-flex align-items-center"><i class="bi bi-geo-alt fs-1 text-primary me-3"></i><div class="text-start"><h6 class="text-uppercase fw-bold">Our Office</h6><span>123 Street, New York, USA</span></div></div></div>
+            <div class="col-lg-4 text-center border-start border-end py-3"><div class="d-inline-flex align-items-center"><i class="bi bi-envelope-open fs-1 text-primary me-3"></i><div class="text-start"><h6 class="text-uppercase fw-bold">Email Us</h6><span>info@example.com</span></div></div></div>
+            <div class="col-lg-4 text-center py-3"><div class="d-inline-flex align-items-center"><i class="bi bi-phone-vibrate fs-1 text-primary me-3"></i><div class="text-start"><h6 class="text-uppercase fw-bold">Call Us</h6><span>+012 345 6789</span></div></div></div>
+        </div>
+    </div>
+
+    <div class="container-fluid sticky-top bg-dark bg-light-radial shadow-sm px-5 pe-lg-0">
+        <nav class="navbar navbar-expand-lg bg-dark bg-light-radial navbar-dark py-3 py-lg-0" aria-label="Main navigation">
+            <a href="../webuild-1/webuild-1.0.0/index.html" class="navbar-brand"><h1 class="m-0 display-4 text-uppercase text-white"><i class="bi bi-building text-primary me-2"></i>WEBUILD</h1></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="../webuild-1/webuild-1.0.0/index.html" class="nav-item nav-link">Home</a>
+                    <a href="../webuild-1/webuild-1.0.0/about.html" class="nav-item nav-link">About</a>
+                    <a href="../webuild-1/webuild-1.0.0/service.html" class="nav-item nav-link">Service</a>
+                    <a href="project.html" class="nav-item nav-link">Our Project</a>
+                    <a href="upload.html" class="nav-item nav-link active" aria-current="page">Upload Media</a>
+                    <a href="../webuild-1/webuild-1.0.0/contact.html" class="nav-item nav-link bg-primary text-white px-5 ms-3 d-none d-lg-block">Get A Quote <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <header class="container-fluid page-header">
+        <h1 class="display-3 text-uppercase text-white mb-3">Upload Media</h1>
+        <div class="d-inline-flex text-white"><h6 class="text-uppercase m-0"><a href="../webuild-1/webuild-1.0.0/index.html">Home</a></h6><h6 class="text-white m-0 px-3">/</h6><h6 class="text-uppercase text-white m-0">Upload Media</h6></div>
+    </header>
+
+    <main class="container-fluid bg-light py-6 px-5 construction-upload-content">
+        <div class="project-intro text-center mx-auto mb-5">
+            <h2 class="display-5 text-uppercase mb-3">Add To The <span class="text-primary">Project</span> Gallery</h2>
+            <p class="text-body-secondary mb-0">Upload construction photos and videos for your project portfolio.</p>
+        </div>
+        <section class="auth-gate" id="authGate" aria-labelledby="authTitle">
+            <div class="auth-gate-heading"><span class="auth-lock-icon" aria-hidden="true"><i class="bi bi-lock"></i></span><div><p class="eyebrow">MEMBER ACCESS</p><h2 id="authTitle">Sign in to upload</h2><p>Sign in to add construction media to the project gallery.</p></div></div>
+            <form id="authForm" class="auth-form">
+                <label class="field-label" for="authEmail">EMAIL</label>
+                <input class="select-control" id="authEmail" type="email" autocomplete="username" placeholder="you@example.com" required>
+                <label class="field-label auth-password-label" for="authPassword">PASSWORD</label>
+                <input class="select-control" id="authPassword" type="password" autocomplete="current-password" placeholder="Your password" required>
+                <button class="button button-primary auth-submit" id="authSubmit" type="submit">Sign in <span aria-hidden="true">→</span></button>
+                <button class="auth-reset" id="resetPassword" type="button">Forgot password?</button>
+                <p class="auth-status" id="authStatus" role="status" aria-live="polite">Checking Firebase sign-in...</p>
+            </form>
+        </section>
+        <div class="upload-layout upload-page" id="uploadWorkspace" hidden>
+            <div class="upload-auth-actions"><span id="signedInEmail"></span><button class="button button-quiet" id="signOutButton" type="button">Sign out</button></div>
+            <section class="upload-main" aria-labelledby="upload-title">
+                <div class="upload-panel">
+                    <div class="section-heading upload-section-heading"><div><h2 id="upload-title">Choose images and videos</h2><p>Select project media from your device.</p></div><span class="step-label">STEP 1 OF 2</span></div>
+                    <label class="drop-zone" id="dropZone" for="fileInput" tabindex="0">
+                        <span class="drop-icon" aria-hidden="true"><i class="bi bi-cloud-arrow-up"></i></span>
+                        <strong>Drop project media here</strong>
+                        <span class="drop-copy">or <span>browse files</span> from your computer</span>
+                        <small>JPG, PNG, WEBP, MP4, MOV, WEBM · Max 100 MB per file</small>
+                    </label>
+                    <input id="fileInput" class="visually-hidden" type="file" multiple accept="image/*,video/*">
+                    <div class="file-list-heading"><strong>Selected media</strong><span id="fileCount">0 files</span></div>
+                    <div class="file-list" id="fileList"><div class="file-list-empty">Your selected images and videos will appear here.</div></div>
+                    <p class="upload-feedback" id="uploadFeedback" role="status" aria-live="polite"></p>
+                </div>
+                <div class="upload-actions"><a class="button button-quiet" href="project.html">Cancel</a><button class="button button-primary" id="queueButton" type="button" disabled>Add to gallery <span aria-hidden="true">→</span></button></div>
+            </section>
+            <aside class="upload-aside">
+                <section class="aside-panel"><div class="section-heading"><div><h2>Project details</h2><p>Choose a media type and project title.</p></div></div>
+                    <label class="field-label" for="mediaTypeSelect">MEDIA TYPE</label>
+                    <select id="mediaTypeSelect" class="select-control"><option value="image">Image</option><option value="video">Video</option></select>
+                    <span class="field-label project-title-label">PROJECT TITLE</span>
+                    <button class="project-title-button" id="projectTitleButton" type="button"><span id="projectTitleLabel">New Construction Project</span><i class="bi bi-pencil" aria-hidden="true"></i></button>
+                    <label class="field-label note-label" for="uploadNote">CAPTION <span>OPTIONAL</span></label>
+                    <textarea id="uploadNote" class="text-control" rows="3" placeholder="Add a short project caption"></textarea>
+                </section>
+                <section class="aside-panel storage-panel"><div class="storage-panel-icon" aria-hidden="true"><i class="bi bi-camera-video"></i></div><div><h3>Gallery media</h3><p>Construction photos and videos</p></div><div class="storage-track"><span></span></div><small>Images and video clips accepted</small></section>
+                <div class="upload-tip"><span aria-hidden="true">i</span><p>Media is previewed in this browser only. Connect a storage service to save it permanently to your project.</p></div>
+            </aside>
+        </div>
+    </main>
+
+    <dialog class="project-title-dialog" id="projectTitleDialog" aria-labelledby="projectTitleDialogHeading">
+        <form method="dialog">
+            <h2 id="projectTitleDialogHeading">Project title</h2>
+            <label class="field-label" for="projectTitleInput">TITLE</label>
+            <input class="select-control" id="projectTitleInput" type="text" maxlength="80" required>
+            <div class="project-title-dialog-actions"><button class="button button-quiet" id="cancelProjectTitle" type="button">Cancel</button><button class="button button-primary" id="saveProjectTitle" type="button">Save title</button></div>
+        </form>
+    </dialog>
+
+    <footer class="footer container-fluid position-relative bg-dark bg-light-radial text-white-50 py-6 px-5">
+        <div class="row g-5">
+            <div class="col-lg-6 pe-lg-5"><a href="../webuild-1/webuild-1.0.0/index.html" class="navbar-brand"><h2 class="m-0 display-4 text-uppercase text-white"><i class="bi bi-building text-primary me-2"></i>WEBUILD</h2></a><p class="mt-3">Building spaces for the way people live and work.</p><p><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</p><p><i class="fa fa-phone-alt me-2"></i>+012 345 67890</p><p><i class="fa fa-envelope me-2"></i>info@example.com</p></div>
+            <div class="col-lg-6 ps-lg-5"><div class="row g-5"><div class="col-sm-6"><h4 class="text-white text-uppercase mb-4">Quick Links</h4><div class="d-flex flex-column justify-content-start"><a class="text-white-50 mb-2" href="../webuild-1/webuild-1.0.0/index.html"><i class="fa fa-angle-right me-2"></i>Home</a><a class="text-white-50 mb-2" href="../webuild-1/webuild-1.0.0/about.html"><i class="fa fa-angle-right me-2"></i>About Us</a><a class="text-white-50 mb-2" href="../webuild-1/webuild-1.0.0/service.html"><i class="fa fa-angle-right me-2"></i>Our Services</a><a class="text-white-50" href="project.html"><i class="fa fa-angle-right me-2"></i>Our Projects</a></div></div><div class="col-sm-6"><h4 class="text-white text-uppercase mb-4">Project Gallery</h4><p>Share progress photos and finished work.</p><a class="text-white-50" href="project.html"><i class="fa fa-angle-right me-2"></i>View Projects</a></div></div></div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="media-store.js"></script>
+    <script>
+        const fileInput = document.querySelector('#fileInput');
+        const dropZone = document.querySelector('#dropZone');
+        const fileList = document.querySelector('#fileList');
+        const fileCount = document.querySelector('#fileCount');
+        const queueButton = document.querySelector('#queueButton');
+        const feedback = document.querySelector('#uploadFeedback');
+        const mediaTypeSelect = document.querySelector('#mediaTypeSelect');
+        const projectTitleButton = document.querySelector('#projectTitleButton');
+        const projectTitleLabel = document.querySelector('#projectTitleLabel');
+        const projectTitleDialog = document.querySelector('#projectTitleDialog');
+        const projectTitleInput = document.querySelector('#projectTitleInput');
+        let selectedFiles = [];
+        let projectTitle = 'New Construction Project';
+
+        function formatSize(bytes) {
+            if (bytes < 1024 * 1024) return `${Math.max(1, Math.round(bytes / 1024))} KB`;
+            return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+        }
+
+        function renderFiles() {
+            fileCount.textContent = `${selectedFiles.length} ${selectedFiles.length === 1 ? 'file' : 'files'}`;
+            queueButton.disabled = selectedFiles.length === 0;
+            if (selectedFiles.length === 0) {
+                fileList.innerHTML = '<div class="file-list-empty">Your selected images and videos will appear here.</div>';
+                return;
+            }
+            fileList.innerHTML = selectedFiles.map((file, index) => `<div class="file-row"><span class="file-type" aria-hidden="true">${file.name.split('.').pop().slice(0, 4).toUpperCase()}</span><div class="file-details"><strong>${file.name.replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char])}</strong><small>${formatSize(file.size)}</small></div><button class="remove-file" type="button" data-index="${index}" aria-label="Remove ${file.name.replace(/[&<>"']/g, '')}">×</button></div>`).join('');
+            fileList.querySelectorAll('.remove-file').forEach((button) => button.addEventListener('click', () => {
+                selectedFiles.splice(Number(button.dataset.index), 1);
+                renderFiles();
+            }));
+        }
+
+        function addFiles(files) {
+            const allFiles = [...files];
+            const incoming = allFiles.filter((file) => mediaTypeSelect.value === 'video' ? file.type.startsWith('video/') : file.type.startsWith('image/'));
+            const tooLarge = incoming.filter((file) => file.size > 100 * 1024 * 1024);
+            selectedFiles = [...selectedFiles, ...incoming.filter((file) => file.size <= 100 * 1024 * 1024)];
+            feedback.textContent = tooLarge.length ? `${tooLarge.length} file${tooLarge.length === 1 ? ' was' : 's were'} skipped. Maximum file size is 100 MB.` : incoming.length !== allFiles.length ? `Choose ${mediaTypeSelect.value} files for this upload.` : '';
+            renderFiles();
+        }
+
+        fileInput.addEventListener('change', () => addFiles(fileInput.files));
+        mediaTypeSelect.addEventListener('change', () => {
+            fileInput.accept = mediaTypeSelect.value === 'video' ? 'video/*' : 'image/*';
+            selectedFiles = [];
+            feedback.textContent = '';
+            renderFiles();
+        });
+        projectTitleButton.addEventListener('click', () => {
+            projectTitleInput.value = projectTitle;
+            projectTitleDialog.showModal();
+            projectTitleInput.focus();
+        });
+        document.querySelector('#cancelProjectTitle').addEventListener('click', () => projectTitleDialog.close());
+        document.querySelector('#saveProjectTitle').addEventListener('click', () => {
+            const title = projectTitleInput.value.trim();
+            if (!title) {
+                projectTitleInput.focus();
+                return;
+            }
+            projectTitle = title;
+            projectTitleLabel.textContent = title;
+            projectTitleDialog.close();
+        });
+        ['dragenter', 'dragover'].forEach((eventName) => dropZone.addEventListener(eventName, (event) => {
+            event.preventDefault();
+            dropZone.classList.add('dragging');
+        }));
+        ['dragleave', 'drop'].forEach((eventName) => dropZone.addEventListener(eventName, (event) => {
+            event.preventDefault();
+            dropZone.classList.remove('dragging');
+        }));
+        dropZone.addEventListener('drop', (event) => addFiles(event.dataTransfer.files));
+        dropZone.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                fileInput.click();
+            }
+        });
+        queueButton.addEventListener('click', async () => {
+            if (selectedFiles.length === 0) {
+                feedback.textContent = 'Choose media to add to the project gallery.';
+                return;
+            }
+            queueButton.disabled = true;
+            feedback.textContent = 'Saving media to the project gallery...';
+            try {
+                const records = selectedFiles.map((file, index) => ({
+                    id: `${Date.now()}-${index}-${Math.random().toString(36).slice(2)}`,
+                    name: file.name,
+                    mediaType: mediaTypeSelect.value,
+                    projectTitle,
+                    caption: document.querySelector('#uploadNote').value.trim(),
+                    blob: file,
+                    createdAt: Date.now()
+                }));
+                await Promise.all(records.map((record) => ProjectMediaStore.put(record)));
+                window.location.href = 'project.html?uploaded=1';
+            } catch (error) {
+                feedback.textContent = 'Could not save these files in this browser. Check available storage and try again.';
+                queueButton.disabled = false;
+            }
+        });
+
+        const authGate = document.querySelector('#authGate');
+        const uploadWorkspace = document.querySelector('#uploadWorkspace');
+        const authStatus = document.querySelector('#authStatus');
+        const authForm = document.querySelector('#authForm');
+        const authSubmit = document.querySelector('#authSubmit');
+        const signedInEmail = document.querySelector('#signedInEmail');
+        const authConfig = window.FIREBASE_CONFIG;
+        const hasFirebaseConfig = authConfig && authConfig.apiKey && !authConfig.apiKey.startsWith('YOUR_') && authConfig.projectId && !authConfig.projectId.startsWith('YOUR_');
+
+        if (!window.firebase || !hasFirebaseConfig) {
+            authStatus.textContent = 'Firebase is not configured yet. Add your Firebase web app settings to firebase-config.js.';
+            authSubmit.disabled = true;
+        } else {
+            firebase.initializeApp(authConfig);
+            const auth = firebase.auth();
+            auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
+            auth.onAuthStateChanged((user) => {
+                authGate.hidden = Boolean(user);
+                uploadWorkspace.hidden = !user;
+                signedInEmail.textContent = user ? user.email : '';
+                if (!user) authStatus.textContent = 'Sign in with your Firebase account to continue.';
+            });
+
+            authForm.addEventListener('submit', async (event) => {
+                event.preventDefault();
+                authSubmit.disabled = true;
+                authStatus.textContent = 'Signing in...';
+                try {
+                    await auth.signInWithEmailAndPassword(
+                        document.querySelector('#authEmail').value.trim(),
+                        document.querySelector('#authPassword').value
+                    );
+                } catch (error) {
+                    authStatus.textContent = error.code === 'auth/operation-not-allowed'
+                        ? 'Enable Email/Password sign-in in Firebase Authentication.'
+                        : error.code === 'auth/unauthorized-domain'
+                            ? 'Add this site domain to Firebase Authentication authorized domains.'
+                            : 'Sign-in failed. Check your email and password, then try again.';
+                    authSubmit.disabled = false;
+                }
+            });
+
+            document.querySelector('#resetPassword').addEventListener('click', async () => {
+                const email = document.querySelector('#authEmail').value.trim();
+                if (!email) {
+                    authStatus.textContent = 'Enter your email first to reset your password.';
+                    document.querySelector('#authEmail').focus();
+                    return;
+                }
+                try {
+                    await auth.sendPasswordResetEmail(email);
+                    authStatus.textContent = 'Password reset email sent.';
+                } catch (error) {
+                    authStatus.textContent = 'Could not send a reset email. Check the address and Firebase settings.';
+                }
+            });
+
+            document.querySelector('#signOutButton').addEventListener('click', () => auth.signOut());
+        }
+    </script>
+</body>
+</html>
